@@ -177,18 +177,6 @@ gemini-spark/
 │   └── index.css            # Main extension styles
 ├── background.js            # Service worker for extension
 └── manifest.json            # Extension configuration
-Each file serves a specific purpose in the extension:
-- `manifest.json`: Defines extension metadata, permissions, and resources
-- `background.js`: Handles background processes and extension lifecycle
-- `index.html/js/css`: Core extension UI and functionality
-- Feature-specific modules contain their own logic, styles, and components
-- Each Google Workspace app has its own directory with relevant features
-- Utility tools are organized in separate directories for maintainability
-
-### Build Commands
-- `npm install`: Install dependencies.
-- `npm run build`: Build the extension for production.
-- `npm run dev`: Start development mode.
 
 ---
 
