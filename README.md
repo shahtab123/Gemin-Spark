@@ -1,4 +1,4 @@
-Gemini Spark - AI-Powered Chrome Extension
+### Gemini Spark - AI-Powered Chrome Extension
 
 Gemini Spark is a feature-rich Chrome Extension that utilizes Chrome's native AI capabilities to enhance productivity across Google Workspace applications, including Gmail, Docs, Sheets, and Slides. Powered by Chrome's Gemini Nano model and AI APIs, Gemini Spark provides on-device AI processing for privacy, speed, and seamless integration.
 
