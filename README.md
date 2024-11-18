@@ -177,10 +177,6 @@ gemini-spark/
 │   └── index.css            # Main extension styles
 ├── background.js            # Service worker for extension
 └── manifest.json            # Extension configuration
-
-
-
-### Key Notes:
 Each file serves a specific purpose in the extension:
 - `manifest.json`: Defines extension metadata, permissions, and resources
 - `background.js`: Handles background processes and extension lifecycle
@@ -198,28 +194,6 @@ Each file serves a specific purpose in the extension:
 
 
 ## API Implementation Examples
-
-### Language Model (Prompt) API
-Used for generating content, paraphrasing, and smart compose features.
-
-```javascript
-// Example from smartCompose.js
-const session = await window.ai.languageModel.create({
-  systemPrompt: `You are an expert email writer who crafts precise, well-structured emails.
-                Follow these rules strictly:
-                1. Maintain a ${tone} tone throughout
-                2. Length requirement: ${lengthGuides[length]}
-                3. Be concise and direct
-                4. Include proper email greeting and signature`
-});
-
-const stream = await session.promptStreaming(prompt);
-for await (const chunk of stream) {
-  const newContent = chunk.slice(previousLength);
-  outputBox.textContent += newContent;
-  previousLength = chunk.length;
-}
-```
 
 ### Summarization API
 Used in Tab Summarizer and Right-Click Summarizer features.
@@ -264,6 +238,28 @@ if (canTranslate === 'after-download') {
 
 // Perform translation
 const result = await translator.translate(inputText);
+```
+
+### Language Model (Prompt) API
+Used for generating content, paraphrasing, and smart compose features.
+
+```javascript
+// Example from smartCompose.js
+const session = await window.ai.languageModel.create({
+  systemPrompt: `You are an expert email writer who crafts precise, well-structured emails.
+                Follow these rules strictly:
+                1. Maintain a ${tone} tone throughout
+                2. Length requirement: ${lengthGuides[length]}
+                3. Be concise and direct
+                4. Include proper email greeting and signature`
+});
+
+const stream = await session.promptStreaming(prompt);
+for await (const chunk of stream) {
+  const newContent = chunk.slice(previousLength);
+  outputBox.textContent += newContent;
+  previousLength = chunk.length;
+}
 ```
 
 Key Implementation Notes:
