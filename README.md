@@ -177,8 +177,8 @@ gemini-spark/
 │   └── index.css            # Main extension styles
 ├── background.js            # Service worker for extension
 └── manifest.json            # Extension configuration
+```
 
----
 
 
 ## API Implementation Examples
