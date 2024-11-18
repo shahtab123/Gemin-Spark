@@ -143,6 +143,7 @@ Gemini Spark uses Chrome's built-in AI APIs, ensuring robust and efficient perfo
 
 ### Project Structure
 
+```plaintext
 gemini-spark/
 ├── sidepanel/               # Main extension UI components
 │   ├── about/               # About page components
