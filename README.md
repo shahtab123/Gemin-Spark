@@ -144,38 +144,39 @@ Gemini Spark uses Chrome's built-in AI APIs, ensuring robust and efficient perfo
 ### Project Structure
 
 gemini-spark/
-├── sidepanel/                      # Main extension UI components
-│   ├── about/                      # About page components
-│   │   ├── about.js               # About page logic and content
-│   │   └── about.css              # About page styling
-│   ├── docs/                       # Google Docs features
-│   │   ├── docs.js                # Main Docs feature handler
-│   │   ├── paraphrasingTools.js   # Text paraphrasing functionality
-│   │   └── translation.js         # Text translation features
-│   ├── gmail/                      # Gmail integration features
-│   │   ├── gmail.js               # Gmail feature initialization
-│   │   ├── gmailInteractions.js   # Gmail content script for AI interactions
-│   │   ├── gmailInteractions.css  # Styles for Gmail interactions
-│   │   ├── smartCompose.js        # Smart compose functionality
-│   │   └── otherFeatures.js       # Additional Gmail AI features
-│   ├── sheets/                     # Google Sheets features
-│   │   ├── sheets.js              # Sheets feature initialization
-│   │   └── generateFormula.js     # Formula generation functionality
-│   ├── slides/                     # Google Slides features
-│   │   ├── slides.js              # Slides feature initialization
-│   │   ├── slideContentGen.js     # Slide content generation
-│   │   └── outlineCreator.js      # Presentation outline creation
-│   ├── otherTools/                 # Additional utility features
-│   │   ├── otherTools.js          # Other tools initialization
-│   │   ├── rightClickSummarizer/  # Context menu summarization
-│   │   │   └── rightClickSummarizer.js  # Right-click summary logic
-│   │   └── tabSummarizer/         # Tab summarization feature
-│   │       └── tabSummarizer.js   # Tab summary implementation
-│   ├── index.html                 # Main extension HTML
-│   ├── index.js                   # Main extension JavaScript
-│   └── index.css                  # Main extension styles
-├── background.js                  # Service worker for extension
-└── manifest.json                  # Extension configuration
+├── sidepanel/               # Main extension UI components
+│   ├── about/               # About page components
+│   │   ├── about.js         # About page logic and content
+│   │   └── about.css        # About page styling
+│   ├── docs/                # Google Docs features
+│   │   ├── docs.js          # Main Docs feature handler
+│   │   ├── paraphrasingTools.js # Text paraphrasing functionality
+│   │   └── translation.js   # Text translation features
+│   ├── gmail/               # Gmail integration features
+│   │   ├── gmail.js         # Gmail feature initialization
+│   │   ├── gmailInteractions.js # Gmail content script for AI interactions
+│   │   ├── gmailInteractions.css # Styles for Gmail interactions
+│   │   ├── smartCompose.js  # Smart compose functionality
+│   │   └── otherFeatures.js # Additional Gmail AI features
+│   ├── sheets/              # Google Sheets features
+│   │   ├── sheets.js        # Sheets feature initialization
+│   │   └── generateFormula.js # Formula generation functionality
+│   ├── slides/              # Google Slides features
+│   │   ├── slides.js        # Slides feature initialization
+│   │   ├── slideContentGen.js # Slide content generation
+│   │   └── outlineCreator.js # Presentation outline creation
+│   ├── otherTools/          # Additional utility features
+│   │   ├── otherTools.js    # Other tools initialization
+│   │   ├── rightClickSummarizer/
+│   │   │   └── rightClickSummarizer.js # Right-click summary logic
+│   │   └── tabSummarizer/
+│   │       └── tabSummarizer.js # Tab summary implementation
+│   ├── index.html           # Main extension HTML
+│   ├── index.js             # Main extension JavaScript
+│   └── index.css            # Main extension styles
+├── background.js            # Service worker for extension
+└── manifest.json            # Extension configuration
+
 
 
 Each file serves a specific purpose in the extension:
