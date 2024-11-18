@@ -1,0 +1,65 @@
+{
+  "manifest_version": 3,
+  "name": "Gemini Spark",
+  "version": "1.0",
+  "description": "AI-powered Chrome extension for Gmail, Docs, Sheets, and more",
+  "permissions": [
+    "storage",
+    "scripting",
+    "sidePanel",
+  
+    "activeTab",
+    "tabs",
+    "clipboardWrite",
+
+    "generativeContent",
+    "nativeMessaging",
+    "contextMenus"
+  ],
+  "action": {
+    "default_title": "Gemini Spark"
+  },
+  "side_panel": {
+    "default_path": "sidepanel/index.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://mail.google.com/*",
+        "*://mail.google.com/mail/*",
+        "*://mail.google.com/mail/u/*"
+      ],
+      "js": ["sidepanel/gmail/gmailInteractions.js"],
+      "css": ["sidepanel/gmail/gmailInteractions.css"],
+      "run_at": "document_end"
+    },
+    {
+      "matches": ["*://docs.google.com/document/*"],
+      "run_at": "document_start",
+      "js": ["sidepanel/docs/gdocs-enable-annotated-canvas.js"],
+      "world": "MAIN"
+    }
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self'"
+  },
+  "host_permissions": [
+    "https://*/*",
+    "<all_urls>",
+    "https://docs.google.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "web_accessible_resources": [{
+    "resources": [
+      "sidepanel/*.js",
+      "sidepanel/*/*.js",
+      "sidepanel/*/*/*.js",
+      "images/*"
+    ],
+    "matches": ["<all_urls>"]
+  }]
+}
+

@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    <link rel="stylesheet" type="text/css" href="about/about.css" />
+    <!-- Add Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Add in the head section -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  </head>
+  <body>
+    <div class="header">
+      <h1>Gemini Spark</h1>
+    </div>
+    
+    <!-- Main menu view -->
+    <div class="menu-view">
+      <div class="menu-container">
+        <button class="menu-button" id="gmailButton">
+          <span class="material-icons">mail</span>
+          Gmail
+        </button>
+        <button class="menu-button" id="docsButton">
+          <span class="material-icons">description</span>
+          Docs
+        </button>
+        <button class="menu-button" id="sheetsButton">
+          <span class="material-icons">grid_on</span>
+          Sheets
+        </button>
+        <button class="menu-button" id="slidesButton">
+          <span class="material-icons">slideshow</span>
+          Slides
+        </button>
+        <button class="menu-button" id="aiChatButton">
+          <span class="material-icons">chat</span>
+          AI Chat
+        </button>
+        <button class="menu-button" id="otherToolsButton">
+          <span class="material-icons">build</span>
+          Other Tools
+        </button>
+        <button class="menu-button" id="aboutButton">
+          <span class="material-icons">info</span>
+          About
+        </button>
+      </div>
+    </div>
+
+    <!-- About view (initially hidden) -->
+    <div class="about-view" style="display: none;">
+      <div class="about-nav">
+        <button class="back-button">
+          <span class="material-icons">arrow_back</span>
+          Back
+        </button>
+      </div>
+      <div class="about-content"></div>
+    </div>
+
+    <!-- Content area for features (initially hidden) -->
+    <div class="content-area" style="display: none;">
+      <div class="warning" hidden id="warning"></div>
+      <div class="result" id="summary"></div>
+    </div>
+
+    <script src="index.js" type="module"></script>
+  </body>
+</html>

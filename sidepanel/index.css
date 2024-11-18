@@ -1,0 +1,151 @@
+:root {
+  --bg-secondary: #e6e2d9;
+  --bg-primary: #d4e7dd;
+  --bg-error: #f89696;
+  --primary: #000000;
+  --primary-hover: #333333;
+  --background: #ffffff;
+  --foreground: #000000;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+    Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  color: var(--foreground);
+  background-color: var(--background);
+  font-size: 16px;
+  padding: 0;
+  margin: 0;
+}
+
+.header {
+  background: linear-gradient(135deg, #1e293b, #0f172a);
+  color: white;
+  padding: 1.25rem;
+  text-align: center;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.menu-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+  padding: 1.25rem;
+  max-width: 400px;
+  margin: 0 auto;
+  align-items: center;
+  width: 85%;
+}
+
+.menu-button {
+  display: grid;
+  grid-template-columns: 48px 1fr 48px;
+  align-items: center;
+  padding: 14px 0;
+  margin: 0;
+  border: none;
+  border-radius: 12px;
+  background-color: #ffffff;
+  cursor: pointer;
+  font-size: 16px;
+  color: var(--primary);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: all 0.2s ease;
+  width: 100%;
+  max-width: 280px;
+}
+
+.menu-button:hover {
+  background-color: #f8f9fa;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.menu-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+.menu-button .material-icons {
+  width: 24px;
+  font-size: 22px;
+  display: flex;
+  justify-content: center;
+  color: #2563eb;
+  grid-column: 1;
+  margin: 0 auto;
+}
+
+.menu-button span:not(.material-icons) {
+  grid-column: 2;
+  text-align: center;
+  font-weight: 500;
+  white-space: nowrap;
+  margin: 0;
+}
+
+.content-area {
+  padding: 1rem;
+  display: block;
+  background: #f8f9fa;
+  min-height: calc(100vh - 160px);
+}
+
+.content-area.hidden {
+  display: none;
+}
+
+.warning {
+  background: var(--bg-error);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin: 1rem 0;
+  color: #991b1b;
+  font-size: 0.875rem;
+}
+
+.result {
+  position: relative;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-top: 1rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  background: transparent;
+  color: inherit;
+}
+
+.back-button:not(.about-nav .back-button) {
+  color: var(--primary) !important;
+  background-color: #d4e7dd !important;
+  width: 100% !important;
+  max-width: 280px !important;
+  padding: 14px 18px !important;
+  display: grid !important;
+  grid-template-columns: 24px 1fr 48px !important;
+  align-items: center !important;
+}
+
+.back-button:not(.about-nav .back-button):hover {
+  background-color: #e6f0eb !important;
+}
+
+.back-button:not(.about-nav .back-button) .material-icons {
+  color: var(--primary) !important;
+  grid-column: 1 !important;
+  margin: 0 !important;
+  font-size: 20px !important;
+}
+
+.back-button:not(.about-nav .back-button) span:not(.material-icons) {
+  grid-column: 2 !important;
+  text-align: left !important;
+  margin-left: 8px !important;
+}
