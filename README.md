@@ -180,7 +180,7 @@ gemini-spark/
 
 
 
-Each file serves a specific purpose in the extension:
+##Each file serves a specific purpose in the extension:
 - `manifest.json`: Defines extension metadata, permissions, and resources
 - `background.js`: Handles background processes and extension lifecycle
 - `index.html/js/css`: Core extension UI and functionality
