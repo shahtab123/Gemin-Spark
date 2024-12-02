@@ -82,6 +82,9 @@ Gemini Spark leverages the following APIs:
 - **Language API**: Real-time translation and language detection.
 
 ---
+[![Video Title](https://img.youtube.com/vi/VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=VIDEO_ID)
+
+---
 
 ## Installation
 
